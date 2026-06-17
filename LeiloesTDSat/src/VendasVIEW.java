@@ -85,7 +85,7 @@ public class VendasVIEW extends javax.swing.JFrame {
             ProdutosDAO produtosdao = new ProdutosDAO();
             DefaultTableModel model = (DefaultTableModel) tabelaVendas.getModel();
             model.setNumRows(0);
-            ArrayList<ProdutosDTO> listagem = produtosdao.listarProdutos();
+            ArrayList<ProdutosDTO> listagem = produtosdao.listarProdutosVendidos();
             for (int i = 0; i < listagem.size(); i++) {
                 model.addRow(new Object[]{
                     listagem.get(i).getId(),
